@@ -1,5 +1,21 @@
 package prefixCalculator;
 
-public class Calculator {
+public class Calculator implements iCalculator {
+	
+	public Calculator() {}
+	
+	int sum(int a, int b) {
+		
+	}
+	
+	int subtract(int a, int b) {
+		
+	}
+	
+	int multiply(int a, int b) {
+		
+	}
+	
+	
 
 }
