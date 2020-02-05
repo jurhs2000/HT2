@@ -1,3 +1,7 @@
+#Ignorar configuraciones de eclipse
+.metadata
+.settings
+
 # Compiled class file
 *.class
 
