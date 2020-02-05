@@ -13,10 +13,10 @@ import java.nio.file.Paths;
 import java.util.Formatter;
 
 public class Main {
-	public String[] lectorDeTexto() throws Exception{
-		
+	public static String[] lectorDeTexto() throws Exception{
+		String barra = File.separator;
 		String dir = System.getProperty("user.dir");
-		File archivo = new File (dir + "datos.txt");
+		File archivo = new File (dir + barra + "datos.txt");
 		FileReader fr;
 		String linea = "";
 		fr = new FileReader (archivo);
@@ -31,5 +31,17 @@ public class Main {
 	}
 	public static void main(String[] args) {
 		System.out.println("ejecutando");
+		try {
+			String[] lista = lectorDeTexto();
+			for (String string : lista) {
+				System.out.println(string);
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 	}
 }
