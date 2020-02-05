@@ -16,7 +16,7 @@ public class Main {
 	public static String[] lectorDeTexto() throws Exception{
 		String barra = File.separator;
 		String dir = System.getProperty("user.dir");
-		File archivo = new File (dir + barra + "datos.txt");
+		File archivo = new File (dir + barra + "prefixCalculator"+barra +"datos.txt");
 		FileReader fr;
 		String linea = "";
 		fr = new FileReader (archivo);
