@@ -36,6 +36,33 @@ public class Main {
 			iCalculator calculadora = new Calculator();
 			iStack<Integer> stack = new Stack<Integer>();
 			int a =0,b= 0;
+			
+			boolean verificador1 = false;
+			boolean verificador2 = false;
+			//Verificacion si hay suficientes operadores para los numeros escritos O VISCEVERSA
+			
+				int contadorOperador = 0;
+				int contadorNumero = 0;
+				for (String c : lista) {
+					if(c.equals("+")||c.equals("-")||c.equals("*")||c.equals("/")) {
+						contadorOperador++;
+						
+					}
+					else {
+						contadorNumero++;
+					}
+				}
+				if(contadorOperador+1 != contadorNumero) {
+					verificador1 = true;
+					System.out.println("NO HAY SUFICIENTES OPERADORES O NUMEROS PARA REALIZAR LA OPERACION");
+					
+				}
+			
+			
+			
+			
+			
+			if(!verificador1 ) {
 			for (String c : lista) {
 				if(c.equals("+")||c.equals("-")||c.equals("*")||c.equals("/")) {
 					if(c.equals("+")) {
@@ -72,6 +99,8 @@ public class Main {
 				
 			}
 			System.out.println("EL RESULTADO POSTFIX ES: "+stack.peek());
+			}
+			
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
