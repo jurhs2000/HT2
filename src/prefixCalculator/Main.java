@@ -33,8 +33,33 @@ public class Main {
 		System.out.println("ejecutando");
 		try {
 			String[] lista = lectorDeTexto();
-			for (String string : lista) {
-				System.out.println(string);
+			iStack<Integer> stack = new Stack<Integer>();
+			for (String c : lista) {
+				if(c.equals("+")||c.equals("-")||c.equals("*")||c.equals("/")) {
+					if(c.equals("+")) {
+						
+					}
+
+					if(c.equals("-")) {
+						
+					}
+					
+
+					if(c.equals("*")) {
+						
+					}
+
+					if(c.equals("/")) {
+						
+					}
+					
+					
+					
+				}
+				else {
+					stack.push(Integer.parseInt(c));
+				}
+				
 			}
 			
 		} catch (Exception e) {
