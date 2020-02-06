@@ -33,24 +33,34 @@ public class Main {
 		System.out.println("ejecutando");
 		try {
 			String[] lista = lectorDeTexto();
+			iCalculator calculadora = new Calculator();
 			iStack<Integer> stack = new Stack<Integer>();
+			int a =0,b= 0;
 			for (String c : lista) {
 				if(c.equals("+")||c.equals("-")||c.equals("*")||c.equals("/")) {
 					if(c.equals("+")) {
-						
+						a = stack.pop();
+						b = stack.pop();
+						stack.push(calculadora.suma(a, b));
 					}
 
 					if(c.equals("-")) {
-						
+						a = stack.pop();
+						b = stack.pop();
+						stack.push(calculadora.resta(a, b));
 					}
 					
 
 					if(c.equals("*")) {
-						
+						a = stack.pop();
+						b = stack.pop();
+						stack.push(calculadora.multiplicacion(a, b));
 					}
 
 					if(c.equals("/")) {
-						
+						a = stack.pop();
+						b = stack.pop();
+						stack.push(calculadora.division(a, b));
 					}
 					
 					
@@ -61,6 +71,7 @@ public class Main {
 				}
 				
 			}
+			System.out.println("EL RESULTADO POSTFIX ES: "+stack.peek());
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
