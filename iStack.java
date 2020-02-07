@@ -1,5 +1,5 @@
-package prefixCalculator;
-
+//Jose Hurtarte
+//Julio Herrera
 public interface iStack<E> {
 
    /**

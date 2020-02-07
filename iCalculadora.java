@@ -1,6 +1,6 @@
-package prefixCalculator;
-
-public interface iCalculator {
+//Jose Hurtarte
+//Julio Herrera
+public interface iCalculadora {
 	
 	//pre: requires 2 numbers
 	//post: addition number b to number a

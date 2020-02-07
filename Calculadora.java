@@ -1,7 +1,6 @@
-package prefixCalculator;
-
-
-public class Calculator implements iCalculator{
+//Jose Hurtarte
+//Julio Herrera
+public class Calculadora implements iCalculadora{
 
 	/**
 	 * suma los parametros y los devuelve

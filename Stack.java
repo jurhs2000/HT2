@@ -1,7 +1,7 @@
-package prefixCalculator;
 
 import java.util.Vector;
-
+//Jose Hurtarte
+//Julio Herrera
 public class Stack<E> implements iStack<E> {
 	
 	protected Vector<E> data;

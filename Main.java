@@ -1,22 +1,19 @@
 
-package prefixCalculator;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Formatter;
 
+//Jose Hurtarte
+//Julio Herrera
 public class Main {
 	public static String[] lectorDeTexto() throws Exception{
 		String barra = File.separator;
 		String dir = System.getProperty("user.dir");
-		File archivo = new File (dir + barra + "prefixCalculator"+barra +"datos.txt");
+		//AQUI SE LEE EL ARCHIVO TXT
+		//si no corre se debe de reemplazar en el parentesis (dir + barra +"NOMBRE DEL FOLDER EN DONDE ESTA EL PROYECTO"+barra+ "datos.txt")
+		//El error del archivo de texto puede pasar si se corre el programa en eclipse y no en consola
+		//o tambien sucede al trabajar con paquetes
+		File archivo = new File (dir + barra + "datos.txt");
 		FileReader fr;
 		String linea = "";
 		fr = new FileReader (archivo);
@@ -30,15 +27,14 @@ public class Main {
 			
 	}
 	public static void main(String[] args) {
-		System.out.println("ejecutando");
+		System.out.println("CALCULADORA POSTFIX\n");
 		try {
 			String[] lista = lectorDeTexto();
-			iCalculator calculadora = new Calculator();
-			iStack<Integer> stack = new Stack<Integer>();
+			iCalculadora calculadora = new Calculadora();  //ESTA ES LA LINEA DONDE SE DECLARA NUESTRA CLASE CALCULADORA
+			iStack<Integer> stack = new Stack<Integer>(); //ESTA ES LA LINEA DONDE SE DECLARA NUESTRA CLASE STACK
 			int a =0,b= 0;
 			
 			boolean verificador1 = false;
-			boolean verificador2 = false;
 			//Verificacion si hay suficientes operadores para los numeros escritos O VISCEVERSA
 			
 				int contadorOperador = 0;
@@ -104,7 +100,8 @@ public class Main {
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
+			System.out.println("Error de archivo, ver instrucciones en lineas comentadas");
 		}
 		
 		
