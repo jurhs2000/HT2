@@ -1,4 +1,6 @@
-import static org.junit.Assert.*; 
+//Comentado por falta de librerias JUnit y asi evitar errores al compilar con >javac *.java
+//Pruebas se realizaron en eclipse, ver la imagen adjunta al proyecto
+/*import static org.junit.Assert.*; 
 
 import org.junit.jupiter.api.Test;
 //Jose Hurtarte
@@ -36,3 +38,4 @@ class PruebasUnitarias {
 	}
 
 }
+*/

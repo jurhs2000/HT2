@@ -34,8 +34,12 @@ public class Calculadora implements iCalculadora{
 	 */
 	@Override
 	public int division(int a, int b) {
-		
-		return a/b;
+		try {
+			return a/b;
+		} catch (Exception e) {
+			System.out.println("Division /0 no valida");
+			return 0;
+		}
 	}
 
 
